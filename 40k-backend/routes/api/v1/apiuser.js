@@ -19,7 +19,7 @@ router.get('/auth/googlecallback',
     // google returns an array of emails, use the first one
     makeToken({ email: req.user.emails[0].value })
       .then(token => {
-        res.redirect(`http://localhost:3000/login?token=${token}`);
+        res.redirect(`https://warhammer-40k.herokuapp.com/login?token=${token}`);
       })
       .catch(error => {
 
