@@ -9,6 +9,8 @@ require('dotenv').config()
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    //must change line below to templet string
+    // `${uriServer}${process.env.GOOGLE_CALLBACK}`
     callbackURL: process.env.GOOGLE_CALLBACK
   },
   function(accessToken, refreshToken, profile, done) {

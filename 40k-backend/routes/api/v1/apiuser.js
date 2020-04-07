@@ -13,13 +13,13 @@ router.get('/auth/googlelogin',
 //stopped after getting the routes "1:45pm ish didnt get any of the front end stuff"
 //need to add make token to google login
 router.get('/auth/googlecallback',
-  passport.authenticate('google', { failureRedirect: '/login', session: false }),
+  passport.authenticate('google', { failureRedirect: '/', session: false }),
   function (req, res) {
 
     // google returns an array of emails, use the first one
     makeToken({ email: req.user.emails[0].value })
       .then(token => {
-        res.redirect(`https://warhammer-40k.herokuapp.com/login?token=${token}`);
+        res.redirect(`https://warhammer-40k.herokuapp.com?token=${token}`);
       })
       .catch(error => {
 
