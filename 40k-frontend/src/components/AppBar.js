@@ -9,6 +9,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 //import { uriBase} from "../const"
 import {Link as RLink } from "react-router-dom"
 
+
+
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -34,7 +37,7 @@ export default function ButtonAppBar(props) {
       <AppBar position="static">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
+            <MenuIcon color="inherit" className={classes.menuButton}  />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             Wanna Play 40K?
