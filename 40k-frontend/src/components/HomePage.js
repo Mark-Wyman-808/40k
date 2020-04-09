@@ -1,6 +1,7 @@
 import React from 'react'
 import AppBar from './AppBar'
 import { uriBase } from '../const'
+import Blog from "./Blog/Blog"
 const style = {
     backgroundImage:`url(${uriBase}/images/warhammer3-skulls.jpg)`,
     height:"100vh",
@@ -17,9 +18,9 @@ export default function HomePage(props) {
         <div style={style}>
             
         <AppBar></AppBar>
+        <Blog></Blog>
         
-            <h1 >there is only war</h1>
-            {/* <img src={`${uriBase}/images/warhammer-40000-video-games-space-marines-1080P-wallpaper-middle-size.jpg`} alt="Space Marine"></img> */}
+            
         </div>
 
 

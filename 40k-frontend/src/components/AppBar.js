@@ -36,7 +36,7 @@ export default function ButtonAppBar(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="primary" >
         <Toolbar>
           {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon color="inherit" className={classes.menuButton}  />
@@ -46,9 +46,9 @@ export default function ButtonAppBar(props) {
           <CustomizedMenus></CustomizedMenus>
 
           <Typography variant="h6" className={classes.title}>
-            Wanna Play 40K?
+           In the Future There is Only War
           </Typography>
-          <Button color="inherit" to="/profile" component= {RLink}>Profile</Button>
+          <Button color="inherit" to="/login" component= {RLink}>Logout</Button>
         </Toolbar>
       </AppBar>
     </div>

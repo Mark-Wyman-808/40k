@@ -9,6 +9,8 @@ import Profile from './Profile'
 import {LoginProvider} from './LoginContext'
 //import ProtectedRpoute from "./ProtectedRoute"
 //import LocalToken from "./LocalToken"
+import Blog from "./Blog/Blog"
+
 
 
 export default function MainRouter() {
@@ -33,7 +35,7 @@ export default function MainRouter() {
                     <Route path="/users">
                         <UsersF></UsersF>
                     </Route>
-
+                    <Route path="/blog" component= {Blog}></Route>
                     <Route path="/signup" render={(props) => <SignUp {...props} currentUser={currentUser} inintialMessage="Sign Up to Find Players"></SignUp>} >
 
                     </Route>

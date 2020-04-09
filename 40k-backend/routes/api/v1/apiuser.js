@@ -4,7 +4,7 @@ const db = require('../../../db/mongoose')
 const bcrypt = require('bcrypt')
 const { makeToken, verifyToken } = require('../../../bin/jwt')
 const passport = require('passport')
-
+const {uriServer} = "../../../bin/const"
 //routes 
 router.get('/auth/googlelogin',
     passport.authenticate('google', { scope: ['profile', 'email'] })
@@ -19,7 +19,7 @@ router.get('/auth/googlecallback',
     // google returns an array of emails, use the first one
     makeToken({ email: req.user.emails[0].value })
       .then(token => {
-        res.redirect(`https://warhammer-40k.herokuapp.com?token=${token}`);
+        res.redirect(`${uriServer}?token=${token}`);
       })
       .catch(error => {
 
