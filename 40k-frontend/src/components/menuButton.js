@@ -27,7 +27,7 @@ export default function SimpleMenu() {
   return (
     <div>
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        Open Menu
+        Open 
       </Button>
       <Menu
         id="simple-menu"
@@ -37,7 +37,7 @@ export default function SimpleMenu() {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose} to="/profile" component= {RLink}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>Messages</MenuItem>
+        <MenuItem onClick={handleClose}>Battle Schedule</MenuItem>
         <MenuItem onClick={handleClose}>Army Todo List</MenuItem>
       </Menu>
     </div>
