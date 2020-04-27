@@ -11,7 +11,16 @@ import {Link as RLink } from "react-router-dom"
 import CustomizedMenus from "./menuButton"
 
 
+import { createMuiTheme } from '@material-ui/core/styles';
 
+import grey from '@material-ui/core/colors/grey';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: grey,
+   
+  },
+});
 
 
 const useStyles = makeStyles(theme => ({
@@ -35,8 +44,11 @@ export default function ButtonAppBar(props) {
   const classes = useStyles();
 
   return (
+    
     <div className={classes.root}>
-      <AppBar position="static" color="primary" >
+      
+      <AppBar position="static" color="primary"  >
+      
         <Toolbar>
           {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon color="inherit" className={classes.menuButton}  />
@@ -50,8 +62,11 @@ export default function ButtonAppBar(props) {
           </Typography>
           <Button color="inherit" to="/login" component= {RLink}>Logout</Button>
         </Toolbar>
+        
       </AppBar>
+     
     </div>
+    
   );
 
 }

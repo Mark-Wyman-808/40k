@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 const sections = [
   { title: 'Find Games in Your Area', url: '#' },
   { title: 'General Discussion', url: '#' },
-  { title: 'News', url: '#' },
+  
   { title: 'Painting and Building', url: '#' },
   
 ];
